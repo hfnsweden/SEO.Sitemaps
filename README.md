@@ -1,3 +1,17 @@
+Sitemap-plugin för EPiServer
+
+Notera att master-branchen med undantag för denna fil är en omodifierad fork av https://github.com/Geta/SEO.Sitemaps
+
+Jag har modifierat denna att stödja SATS Online 3 (Enable and lift) och denna kod ligger i branchen enable-and-lift.
+
+Denna version är baserad på en tidigare commit av projektet innan man uppgraderat till EPiServer 9. Detta eftersom vi vid skrivande stund inte gått förbi version 8 men så snart detta görs kan vi förmodligen uppgradera detta också.
+
+Övriga förändringar som gjorts är för att stödja sajter som ligger i virtuell applikations-folder (i vårt fall /satselixia) vilket visade sig inte stöddes från början.
+
+/ Mattias Malmqvist
+
+Original-README.md nedan:
+
 SEO.Sitemaps
 ============
 
