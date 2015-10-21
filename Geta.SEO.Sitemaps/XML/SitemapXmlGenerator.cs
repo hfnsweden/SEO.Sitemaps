@@ -537,12 +537,6 @@ namespace Geta.SEO.Sitemaps.XML
             {
                 url = UriSupport.Combine(this.SitemapData.SiteUrl, url);
             }
-            // Force the SiteUrl
-            else
-            {
-                url = UriSupport.Combine(this.SitemapData.SiteUrl, absoluteUri.AbsolutePath);
-            }
-
             return url;
         }
 

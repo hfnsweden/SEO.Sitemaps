@@ -39,13 +39,12 @@ namespace Geta.SEO.Sitemaps.Repositories
             return SitemapStore.Items<SitemapData>().FirstOrDefault(sitemap => sitemap.Id == id);
         }
 
-        public SitemapData GetSitemapData(string requestUrl)
+        public SitemapData GetSitemapData(string applicationUrl, string requestUrl)
         {
-            var url = new Url(requestUrl); 
-            
-            var host = url.Path.TrimStart('/').ToLowerInvariant();
-
-            return GetAllSitemapData().FirstOrDefault(x => GetHostWithLanguage(x) == host && (x.SiteUrl == null || x.SiteUrl.Contains(url.Host)));
+            var url = new Url(requestUrl);
+            var host = url.Uri.AbsoluteUri.Replace(applicationUrl, string.Empty).TrimStart(new[] { '/' });
+            var data = GetAllSitemapData();
+            return data.FirstOrDefault(x => GetHostWithLanguage(x) == host && (x.SiteUrl == null || x.SiteUrl.Contains(url.Host)));
         }
 
         public string GetSitemapUrl(SitemapData sitemapData)

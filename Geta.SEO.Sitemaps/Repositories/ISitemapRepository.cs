@@ -12,7 +12,7 @@ namespace Geta.SEO.Sitemaps.Repositories
 
         SitemapData GetSitemapData(Identity id);
 
-        SitemapData GetSitemapData(string requestUrl);
+        SitemapData GetSitemapData(string applicationUrl, string requestUrl);
 
         string GetSitemapUrl(SitemapData sitemapData);
 

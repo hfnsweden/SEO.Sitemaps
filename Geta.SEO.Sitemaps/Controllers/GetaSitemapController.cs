@@ -34,7 +34,7 @@ namespace Geta.SEO.Sitemaps.Controllers
 
         public ActionResult Index()
         {
-            SitemapData sitemapData = _sitemapRepository.GetSitemapData(Request.Url.ToString());
+            SitemapData sitemapData = _sitemapRepository.GetSitemapData(Request.Url.GetLeftPart(UriPartial.Authority) + Request.ApplicationPath, Request.Url.ToString());
 
             if (sitemapData == null)
             {
