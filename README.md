@@ -1,4 +1,4 @@
-Sitemap-plugin för EPiServer
+##Sitemap-plugin för EPiServer
 
 Notera att master-branchen med undantag för denna fil är en omodifierad fork av https://github.com/Geta/SEO.Sitemaps
 
